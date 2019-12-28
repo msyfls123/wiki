@@ -5,3 +5,6 @@ Creation-Date: 2019-12-21T00:01:01+08:00
 ====== Rust ======
 Created 星期六 21 十二月 2019
 
+===== 资源 =====
+https://rust-unofficial.github.io/too-many-lists/index.html
+https://exercism.io/my/tracks/rust

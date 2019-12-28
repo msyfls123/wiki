@@ -11,5 +11,15 @@ Created 星期六 21 十二月 2019
 | 马申彦 | 1992.4.28  | 183 | 85 | 男  |
 
 
+
 ===== 学习中 =====
 * [[:Rust|Rust]]
+* [[:RxJS|RxJS]]
+
+=== Tips: ===
+Zim for Mac
+{{{code: lang="sh" linenumbers="True"
+brew install zim
+}}}
+
+
