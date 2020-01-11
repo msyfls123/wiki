@@ -5,6 +5,38 @@ Creation-Date: 2019-12-21T00:01:01+08:00
 ====== Rust ======
 Created 星期六 21 十二月 2019
 
+===== 知识点 =====
+
+=== Iterator ===
+* fold{{{code: lang="c" linenumbers="True"
+let a = [1, 2, 3];
+
+// the sum of all of the elements of the array
+let sum = a.iter().fold(0, |acc, x| acc + x);
+
+assert_eq!(sum, 6);
+}}}
+
+* take{{{code: lang="c" linenumbers="True"
+let mut iter = (0..).take(3);
+
+assert_eq!(iter.next(), Some(0));
+assert_eq!(iter.next(), Some(1));
+assert_eq!(iter.next(), Some(2));
+assert_eq!(iter.next(), None);
+}}}
+
+* flat_map{{{code: lang="c" linenumbers="True"
+let words = ["alpha", "beta", "gamma"];
+
+// chars() returns an iterator
+let merged: String = words.iter()
+						  .flat_map(|s| s.chars())
+						  .collect();
+assert_eq!(merged, "alphabetagamma");
+}}}
+
+
 ===== 资源 =====
 https://rust-unofficial.github.io/too-many-lists/index.html
 https://exercism.io/my/tracks/rust
