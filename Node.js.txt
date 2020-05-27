@@ -1,0 +1,18 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-05-27T23:27:07+08:00
+
+====== Node.js ======
+Created 星期三 27 五月 2020
+
+===== npm =====
+
+=== package entry ===
+* main: CommonJS 主文件
+* module: ES Module 入口的 ES5 代码文件，以便 tree shaking
+* es2015: ES Module
+* types: TypeScript 定义
+
+参考
+https://github.com/SunshowerC/blog/issues/8
+https://github.com/ReactiveX/rxjs/blob/master/package.json
