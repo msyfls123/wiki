@@ -1,8 +1,21 @@
 Content-Type: text/x-zim-wiki
-Wiki-Format: zim 0.4
+Wiki-Format: zim 0.6
 Creation-Date: 2020-06-21T00:09:07+08:00
 
 ====== JavaScript ======
 Created Sunday 21 June 2020
 
 * ''Array.fill'' 会创建同一元素的浅拷贝，例如 ''var example = Array(10).fill([])'' 会创建出包含 10 个相同数组的二维数组，如果这时 ''example[5].push(1)''，所有的 10 个数组都会变成 ''[1]''
+* Web worker use Fetch
+{{{code: lang="javascript" linenumbers="True"
+const worker = `
+  this.onmessage = function(msg) {
+    fetch(
+      'https://day.ebichu.cc/api/#'.replace('#', msg.data)
+    ).then(r => r.json()).then((res) => this.postMessage(res))
+  }
+`
+const w1 = new Worker(URL.createObjectURL(new Blob([worker])))
+w1.onmessage = (res) => console.log(res.data)
+w1.postMessage(23)
+}}}
