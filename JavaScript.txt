@@ -19,3 +19,6 @@ const w1 = new Worker(URL.createObjectURL(new Blob([worker])))
 w1.onmessage = (res) => console.log(res.data)
 w1.postMessage(23)
 }}}
+
+* [[https://medium.com/trabe/mocking-different-values-for-the-same-module-using-jest-a7b8d358d78b|Jest mocking different values for the same module]]
+
