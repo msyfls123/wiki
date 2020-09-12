@@ -1,5 +1,5 @@
 Content-Type: text/x-zim-wiki
-Wiki-Format: zim 0.6
+Wiki-Format: zim 0.4
 Creation-Date: 2020-06-21T00:09:07+08:00
 
 ====== JavaScript ======
@@ -21,4 +21,40 @@ w1.postMessage(23)
 }}}
 
 * [[https://medium.com/trabe/mocking-different-values-for-the-same-module-using-jest-a7b8d358d78b|Jest mocking different values for the same module]]
+* ReadableStream 示例，以 1s 间隔写入 2 个 chunk，2s 间隔读取数据，造成数据挤压{{{code: lang="js" linenumbers="True"
+const data = Array(20).fill(0).map((_, i) => i)
+
+const stream = new ReadableStream({
+	start(controller) {
+		let pos = 0
+		const pushStream = () => {
+			// push to stream every 1s
+			setTimeout(() => {
+				controller.enqueue(data[pos])
+				controller.enqueue(data[pos])
+				console.log('desired size:', controller.desiredSize)
+				if (pos < data.length) {
+					pos += 1
+					pushStream()
+				}
+			}, 1000)
+		}
+		pushStream()
+	},
+}, {
+	highWaterMark: 2
+})
+let reader = stream.getReader()
+
+function read() {
+	reader.read().then(({done, value}) => {
+		console.log('read: ', value)
+		if (!done) {
+			// read stream every 2s
+			setTimeout(read, 2000)
+		}
+	})
+}
+read()
+}}}
 
