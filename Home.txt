@@ -1,5 +1,5 @@
 Content-Type: text/x-zim-wiki
-Wiki-Format: zim 0.4
+Wiki-Format: zim 0.6
 Creation-Date: 2019-12-21T00:01:15+08:00
 
 ====== Home ======
@@ -19,9 +19,18 @@ Created 星期六 21 十二月 2019
 * [[Node.js]]
 
 === Tips: ===
-Zim for Mac
+**Zim for Mac**
 {{{code: lang="sh" linenumbers="True"
 brew install zim
 }}}
 
 
+**Git: grep untracked files**
+grep tab
+{{{code: lang="sh" linenumbers="True"
+git status | grep $'\t'
+}}}
+
+更直接的方式{{{code: lang="sh" linenumbers="True"
+git ls-files --others --exclude-standard
+}}}
