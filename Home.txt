@@ -5,18 +5,13 @@ Creation-Date: 2019-12-21T00:01:15+08:00
 ====== Home ======
 Created 星期六 21 十二月 2019
 
-| 姓名  | 出生日期       | 身高  | 体重 | 性别 |
-|:----|:-----------|:----|:---|:---|
-| 宿晓旻 | 1995.10.23 | 165 | *  | 女  |
-| 马申彦 | 1992.4.28  | 183 | 79 | 男  |
-
-
 
 ===== 学习中 =====
 * [[:Rust|Rust]]
 * [[:RxJS|RxJS]]
 * [[JavaScript]]
 * [[Node.js]]
+* [[:C++|C++]]
 
 === Tips: ===
 **Zim for Mac**
@@ -31,6 +26,7 @@ grep tab
 git status | grep $'\t'
 }}}
 
-更直接的方式{{{code: lang="sh" linenumbers="True"
+更直接的方式
+{{{code: lang="sh" linenumbers="True"
 git ls-files --others --exclude-standard
 }}}

@@ -1,0 +1,9 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2021-10-07T11:08:44+08:00
+
+====== C++ ======
+Created 星期四 07 十月 2021
+
+===== 字符串 =====
+* 字符串连接会导致 size 以外空间被覆写 https://stackoverflow.com/questions/19230452/size-of-strcat-destination-array
