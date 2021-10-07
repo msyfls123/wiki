@@ -21,7 +21,8 @@ w1.postMessage(23)
 }}}
 
 * [[https://medium.com/trabe/mocking-different-values-for-the-same-module-using-jest-a7b8d358d78b|Jest mocking different values for the same module]]
-* ReadableStream 示例，以 1s 间隔写入 2 个 chunk，2s 间隔读取数据，造成数据挤压{{{code: lang="js" linenumbers="True"
+* ReadableStream 示例，以 1s 间隔写入 2 个 chunk，2s 间隔读取数据，造成数据挤压
+{{{code: lang="js" linenumbers="True"
 const data = Array(20).fill(0).map((_, i) => i)
 
 const stream = new ReadableStream({
@@ -57,5 +58,6 @@ function read() {
 }
 read()
 }}}
+
 
 
